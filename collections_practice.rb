@@ -58,7 +58,23 @@ def count_elements(array)
   end
 end
 
+def merge_data(keys, data)
+  keys.each do |hash| 
+    first_name = hash[:first_name]
+    
+    info = data[0][first_name] 
 
+
+    puts info 
+    info.each do |key, value| 
+
+      hash[key] = value 
+
+
+
+    end
+  end
+end
 
 
 
