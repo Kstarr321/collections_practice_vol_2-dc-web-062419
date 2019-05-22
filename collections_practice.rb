@@ -76,7 +76,12 @@ def merge_data(keys, data)
   end
 end
 
-
+def find_cool(array)
+  array.select do |item| 
+    item.has_value?('cool')
+    # item.values == 'cool'
+  end
+end
 
 
 
