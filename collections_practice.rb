@@ -60,10 +60,20 @@ end
 
 
 def merge_data(keys, data)
-  
-  
+  keys.each do |hash| #keys is an array of hashes
+    first_name = hash[:first_name] #calls the value assocaited with the key :first_name and sets it to a variable called first_name 
+    
+    info = data[0][first_name] #data is an array of hashes also. data[0] will call the first value in the array which is a hash. Then, using a previously set variable "first_name"...we use it to call the deeper hash assocaited with that person's name (which is a key). We set that hash to a varibale called "Info"
+    puts info 
+    info.each do |key, value| #since info is a hash we can iterate through it and use key/value pairs as placeholders. This is where we are going to merge the two hashes. 
 
-end 
+      hash[key] = value # 
+
+
+
+    end
+  end
+end
 
 
 
